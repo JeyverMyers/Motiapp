@@ -1,0 +1,47 @@
+# dependencies
+/node_modules
+/.pnp
+.pnp.*
+
+# next.js
+/.next/
+/out/
+next-env.d.ts
+
+# production
+/build
+
+# misc
+.DS_Store
+*.pem
+Thumbs.db
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# env files (todas; solo se sube la plantilla)
+.env
+.env*
+!.env.example
+
+# cambios apartados del 20 oct, ya rehechos (ver DEUDAS)
+/_pendiente
+
+# vercel
+.vercel
+
+# typescript
+*.tsbuildinfo
+
+# material de apoyo que genera scripts/generar-migracion.mjs
+# (DDL crudo y snapshot para comparar migraciones)
+/drizzle/.generado
+
+# cachés locales de herramientas (creadas porque el sandbox no permite escribir en AppData)
+/.npm-cache
+/.pnpm-cache
+/.pnpm-state
+/.pnpm-store

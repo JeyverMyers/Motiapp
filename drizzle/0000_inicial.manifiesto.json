@@ -1,0 +1,11 @@
+{
+  "generadoEn": "2026-10-15T23:06:00.182Z",
+  "archivo": "0000_inicial.sql",
+  "compuesto": [
+    "src/db/schema.ts (DDL de tablas, generado por drizzle-kit)",
+    "src/db/sql/aprovisionamiento.sql",
+    "src/db/sql/rls.sql"
+  ],
+  "ordenImporta": true,
+  "nota": "El aprovisionamiento y el RLS van al final a propósito: las políticas no se pueden crear antes que las tablas."
+}

@@ -1,0 +1,6 @@
+# Dependencias con scripts de instalación que sí necesitamos ejecutar:
+# @tailwindcss/oxide trae el binario nativo de Tailwind v4 y esbuild lo usa
+# drizzle-kit para compilar las migraciones.
+onlyBuiltDependencies:
+  - "@tailwindcss/oxide"
+  - esbuild
