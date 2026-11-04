@@ -98,7 +98,7 @@ resto son comandos de este repositorio. Calcula 45–60 minutos la primera vez.
 
    | Variable | Valor |
    |---|---|
-   | `DATABASE_URL` | la cadena del paso 1.8 (`motiapp_app`, con `-pooler`) |
+   | `MOTIAPP_DATABASE_URL` | la cadena del paso 1.8 (`motiapp_app`, con `-pooler`). Va en una variable propia porque la integración de Neon controla `DATABASE_URL` con el rol dueño |
    | `NEON_AUTH_BASE_URL` | la de la rama `production` |
    | `NEON_AUTH_COOKIE_SECRET` | **una nueva**, no la de desarrollo: `node -e "console.log(require('crypto').randomBytes(32).toString('base64'))"` |
    | `NEXT_PUBLIC_URL_SITIO` | `https://motiapp.co` (o el dominio de Vercel mientras tanto) |

@@ -53,7 +53,14 @@ const esquemaServidor = z.object({
 export type Entorno = z.infer<typeof esquemaServidor>;
 
 function leerEntorno(): Entorno {
-  const resultado = esquemaServidor.safeParse(process.env);
+  // `MOTIAPP_DATABASE_URL` gana sobre `DATABASE_URL`: la integración de Neon en
+  // Vercel controla `DATABASE_URL` (con el rol dueño) y no se puede editar. Así
+  // la cadena de `motiapp_app` va en una variable propia sin pelear con ella. Si
+  // falta, se usa `DATABASE_URL` y la guarda de rol impide arrancar con el dueño.
+  const resultado = esquemaServidor.safeParse({
+    ...process.env,
+    DATABASE_URL: process.env.MOTIAPP_DATABASE_URL || process.env.DATABASE_URL,
+  });
 
   if (!resultado.success) {
     const detalle = resultado.error.issues
