@@ -1,5 +1,6 @@
 import Link from "next/link";
 
+import { EscudoMotiapp } from "@/components/marca/escudo";
 import { APP } from "@/lib/constantes";
 
 import { CONTENEDOR } from "./estilos";
@@ -13,9 +14,7 @@ export function Pie() {
     <footer className="bg-carbon py-10 font-ui text-paper-white">
       <div className={`${CONTENEDOR} flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between`}>
         <div className="flex items-center gap-3">
-          <span className="flex size-11 items-center justify-center rounded-full border border-paper-white bg-sunburst font-display text-xl text-carbon">
-            M
-          </span>
+          <EscudoMotiapp className="h-12 w-auto" />
           <div>
             <p className="text-sm font-bold tracking-[0.03em]">{APP.nombre}</p>
             <p className="text-[13px] font-medium">Hecho para negocios de motos en Colombia.</p>

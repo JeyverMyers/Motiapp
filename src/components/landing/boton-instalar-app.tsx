@@ -140,14 +140,14 @@ export function BotonInstalarApp({ className = "" }: { className?: string }) {
                 <SquarePlus className="size-4" aria-hidden="true" />
               </span>
               <span>
-                Elige <strong>Añadir a pantalla de inicio</strong> y confirma. Motiapp queda como una app más.
+                Elige <strong>Añadir a pantalla de inicio</strong> y confirma. MotiApp queda como una app más.
               </span>
             </li>
           </ol>
         ) : (
           <div className="mt-5 flex flex-col gap-4 text-[15px] font-medium">
             <p>
-              Motiapp se instala desde el celular. Abre este enlace en Chrome (Android) o Safari (iPhone) y toca
+              MotiApp se instala desde el celular. Abre este enlace en Chrome (Android) o Safari (iPhone) y toca
               «Descargar app» otra vez:
             </p>
             <p className="rounded-full border border-carbon bg-soft-mist px-4 py-2.5 text-center font-bold break-all">

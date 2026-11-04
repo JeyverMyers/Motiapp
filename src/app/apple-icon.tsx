@@ -1,5 +1,7 @@
 import { ImageResponse } from "next/og";
 
+import { EscudoMotiapp } from "@/components/marca/escudo";
+
 export const size = { width: 180, height: 180 };
 export const contentType = "image/png";
 
@@ -14,25 +16,10 @@ export default function IconoApple() {
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
-          background: "#1c1917",
+          background: "#f4f1ed",
         }}
       >
-        <div
-          style={{
-            width: 112,
-            height: 112,
-            borderRadius: 56,
-            background: "#ffd731",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            fontSize: 74,
-            fontWeight: 800,
-            color: "#000000",
-          }}
-        >
-          M
-        </div>
+        <EscudoMotiapp ancho={112} />
       </div>
     ),
     size,

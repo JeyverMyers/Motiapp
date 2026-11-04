@@ -61,7 +61,7 @@ export function FormularioIngreso({ destino }: { destino?: string }) {
       </Boton>
 
       <p className="text-center text-xs text-muted-foreground">
-        ¿No tienes cuenta? Te la crea el administrador de Motiapp.
+        ¿No tienes cuenta? Te la crea el administrador de MotiApp.
       </p>
     </form>
   );

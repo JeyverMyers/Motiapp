@@ -1,12 +1,14 @@
 import { ImageResponse } from "next/og";
 
+import { EscudoMotiapp } from "@/components/marca/escudo";
+
 export const size = { width: 512, height: 512 };
 export const contentType = "image/png";
 
 /**
- * Ícono de la app (PWA y pestaña), dibujado en el servidor: una «M» amarilla
- * sobre el carbón de la marca. Deja margen para que el recorte «maskable» de
- * Android no se coma la letra.
+ * Ícono de la app (PWA y pestaña): el escudo de MotiApp sobre un fondo claro
+ * cálido, como el mármol del logo. Deja margen para que el recorte «maskable»
+ * de Android no se coma el escudo.
  */
 export default function Icono() {
   return new ImageResponse(
@@ -18,26 +20,10 @@ export default function Icono() {
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
-          background: "#1c1917",
+          background: "#f4f1ed",
         }}
       >
-        <div
-          style={{
-            width: 300,
-            height: 300,
-            borderRadius: 150,
-            background: "#ffd731",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            fontSize: 200,
-            fontWeight: 800,
-            color: "#000000",
-            letterSpacing: -8,
-          }}
-        >
-          M
-        </div>
+        <EscudoMotiapp ancho={280} />
       </div>
     ),
     size,

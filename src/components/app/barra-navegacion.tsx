@@ -1,7 +1,7 @@
-import { Bike } from "lucide-react";
 import Link from "next/link";
 
 import { EnlaceNavegacion } from "@/components/app/enlace-navegacion";
+import { EscudoMotiapp } from "@/components/marca/escudo";
 import { Boton } from "@/components/ui/boton";
 import { APP } from "@/lib/constantes";
 import { cerrarSesion } from "@/server/acciones/auth";
@@ -19,6 +19,7 @@ const ENLACES = [
   { href: "/app/empenos", etiqueta: "Empeños" },
   { href: "/app/gastos", etiqueta: "Gastos" },
   { href: "/app/clientes", etiqueta: "Clientes" },
+  { href: "/app/ayuda", etiqueta: "Ayuda" },
 ] as const;
 
 /**
@@ -34,12 +35,10 @@ export function BarraNavegacion({
 }) {
   const enlaces = ENLACES.filter((enlace) => conEmpenos || enlace.href !== "/app/empenos");
   return (
-    <header className="sticky top-0 z-20 border-b bg-card/85 backdrop-blur-md supports-[backdrop-filter]:bg-card/70">
+    <header className="no-imprimir sticky top-0 z-20 border-b bg-card/85 backdrop-blur-md supports-[backdrop-filter]:bg-card/70">
       <div className="mx-auto flex w-full max-w-6xl items-center gap-3 px-4 py-2.5">
-        <Link href="/app" className="flex shrink-0 items-center gap-2 font-semibold tracking-[-0.02em]">
-          <span className="grid size-7 place-items-center rounded-lg bg-primary text-primary-foreground shadow-[var(--sombra-boton)]">
-            <Bike aria-hidden className="size-4" />
-          </span>
+        <Link href="/app" className="flex shrink-0 items-center gap-2 text-[1.0625rem] font-bold tracking-[-0.01em]">
+          <EscudoMotiapp className="h-8 w-auto" />
           {APP.nombre}
         </Link>
 

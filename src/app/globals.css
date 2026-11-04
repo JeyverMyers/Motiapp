@@ -319,3 +319,46 @@
     font-variant-numeric: tabular-nums;
   }
 }
+
+/* ==========================================================================
+   Texto legible (baja visión) — paneles /app y /admin y el ingreso
+   --------------------------------------------------------------------------
+   No es un rediseño: los mismos componentes, con letra más grande, un poco
+   más gruesa y el texto secundario más oscuro. Se aplica con la clase
+   `texto-legible` en la raíz de cada layout; la landing no la usa.
+   Los tamaños de Tailwind leen estas variables, así que redefinirlas aquí
+   agranda todo `text-xs`, `text-sm` y `text-base` dentro del panel.
+   ========================================================================== */
+.texto-legible {
+  --text-xs: 0.875rem; /* 14 px (antes 12) */
+  --text-xs--line-height: 1.45;
+  --text-sm: 0.9375rem; /* 15 px (antes 14) */
+  --text-sm--line-height: 1.5;
+  --text-base: 1.0625rem; /* 17 px (antes 16) */
+  --text-base--line-height: 1.55;
+  /* Gris secundario: de ~4,6:1 a ~9:1 de contraste sobre blanco. */
+  --muted-foreground: oklch(0.4 0.012 58);
+  font-weight: 450;
+}
+
+.dark .texto-legible,
+.texto-legible.dark {
+  --muted-foreground: oklch(0.82 0.01 56);
+}
+
+/* Al imprimir (centro de ayuda → «Imprimir o guardar en PDF»): solo el contenido. */
+@media print {
+  .no-imprimir {
+    display: none !important;
+  }
+  body,
+  .bg-lienzo {
+    background: #fff !important;
+  }
+  details > summary span[aria-hidden] {
+    display: none;
+  }
+  section {
+    break-inside: avoid-page;
+  }
+}

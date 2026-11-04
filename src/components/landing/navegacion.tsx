@@ -1,5 +1,6 @@
 import Link from "next/link";
 
+import { EscudoMotiapp } from "@/components/marca/escudo";
 import { APP } from "@/lib/constantes";
 
 import { BotonInstalarApp } from "./boton-instalar-app";
@@ -27,9 +28,9 @@ export function Navegacion() {
         <Link
           href="/"
           aria-label={`${APP.nombre}, inicio`}
-          className="flex size-11 shrink-0 items-center justify-center rounded-full border border-carbon bg-sunburst font-display text-xl text-carbon focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-carbon"
+          className="flex h-11 shrink-0 items-center justify-center rounded-full px-1 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-carbon"
         >
-          M
+          <EscudoMotiapp className="h-10 w-auto" />
         </Link>
         <span className="hidden font-ui text-sm font-bold tracking-[0.03em] sm:inline">
           {APP.nombre}

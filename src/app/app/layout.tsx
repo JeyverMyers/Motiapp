@@ -46,13 +46,13 @@ export default async function LayoutApp({
   ]);
 
   return (
-    <div className="flex min-h-dvh flex-col bg-lienzo">
+    <div className="texto-legible flex min-h-dvh flex-col bg-lienzo">
       {sesion.impersonando ? (
         <AvisoSoporte negocio={negocio?.nombre ?? "este negocio"} expiraEn={soporte?.expiraEn ?? null} />
       ) : null}
       <BarraNavegacion nombreUsuario={sesion.nombre} conEmpenos={tieneModulo(sesion.plan, "empenos")} />
       <main className="mx-auto w-full max-w-6xl flex-1 px-4 py-6 sm:py-8">{children}</main>
-      <footer className="border-t px-4 py-4 text-center text-xs text-muted-foreground">
+      <footer className="no-imprimir border-t px-4 py-4 text-center text-xs text-muted-foreground">
         Sesión de {sesion.email}
       </footer>
     </div>

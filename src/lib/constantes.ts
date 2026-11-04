@@ -4,7 +4,7 @@
  */
 
 export const APP = {
-  nombre: "Motiapp",
+  nombre: "MotiApp",
   descripcion:
     "Software para negocios de compra y venta de motos y de empeño. Inventario, empeños, clientes y reportes en un solo lugar.",
   dominio: "motiapp.co",

@@ -1,5 +1,6 @@
 import Link from "next/link";
 
+import { EscudoMotiapp } from "@/components/marca/escudo";
 import { APP } from "@/lib/constantes";
 
 import { CONTENEDOR } from "./estilos";
@@ -26,9 +27,7 @@ export function PaginaLegal({
     <div className="min-h-dvh bg-sky-wash font-ui text-carbon">
       <header className={`${CONTENEDOR} flex items-center justify-between py-5`}>
         <Link href="/" className="flex items-center gap-3 font-bold tracking-[0.03em]">
-          <span className="flex size-10 items-center justify-center rounded-full border border-carbon bg-sunburst font-display text-lg">
-            M
-          </span>
+          <EscudoMotiapp className="h-10 w-auto" />
           {APP.nombre}
         </Link>
         <Link href="/" className="text-sm font-bold underline-offset-4 hover:underline">
