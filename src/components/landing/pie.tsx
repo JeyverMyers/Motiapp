@@ -17,7 +17,7 @@ export function Pie() {
           <EscudoMotiapp className="h-12 w-auto" />
           <div>
             <p className="text-sm font-bold tracking-[0.03em]">{APP.nombre}</p>
-            <p className="text-[13px] font-medium">Hecho por estudiante: Jeyver Ballesteros A. para negocios de compra y venta.</p>
+            <p className="text-[13px] font-medium">Hecho por estudiante: Jeyver Ballesteros A. para negocios de compra, venta y empeños.</p>
           </div>
         </div>
         <nav aria-label="Pie de página" className="flex flex-wrap gap-x-5 text-[13px] font-bold uppercase tracking-[0.032em]">
